@@ -1,0 +1,78 @@
+body{
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-image: linear-gradient(to right, #d58da9, #e1949e, #e89d95, #e9a98e, #e5b68b);
+}
+
+button{
+	  width:350px;
+	  height:75px;
+	  font-size:30px;
+	  border:0px;
+	  color:#fff;
+	  box-shadow: 2px 5px 5px #000;
+	  border-radius:10px;
+	  outline:none;
+	  transition:.3s all;
+	  cursor:pointer;
+	  position:relative;
+	  overflow:hidden;
+
+}
+.button1{
+	background-color: #68228b;
+}
+
+.button2{
+	background-color: #ff3030;
+}
+
+button:active{
+	transform: translate(5px,5px);
+	box-shadow: none;
+}
+
+.ripple{
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.2);
+	opacity: 1;
+	transform: translate(-50%,-50%);
+	animation: animation 1s ease-in-out;
+}
+
+.ripple2{
+  position:absolute;
+  width:0;
+  height:0;
+  top:0;
+  left:0;
+  border:0px solid rgba(255,255,255,.4);
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  animation: animation2 1s  ease-in-out ;
+}
+
+@keyframes animation{
+	100%{
+	    width:500px;
+	    height:500px;
+	    opacity:0;
+	}
+}
+
+@keyframes animation2{
+	100%{
+	    width:500px;
+	    height:500px;
+	    opacity:0;
+	    border:100px solid rgba(255,255,255,.4);
+	}
+}
